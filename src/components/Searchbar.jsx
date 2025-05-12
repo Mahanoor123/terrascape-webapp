@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { SearchIcon } from "lucide-react";
 
 const SearchBar = ({ query, setQuery }) => {
+  
   const handleChange = (e) => {
     setQuery(e.target.value);
   };

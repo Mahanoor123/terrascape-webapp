@@ -4,8 +4,7 @@ import DetailSection from "./pages/DetailSection";
 import { fetchSingleCountry } from "./pages/DetailSection";
 import Layout from "./components/Layout";
 import ErrorPage from "./pages/ErrorPage";
-import NotFound from "./pages/notFound";
-import Home from "./pages/Home";
+import TempHome from "./pages/TempHome";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <TempHome/>,
       },
       {
         path: "/country/:id",
