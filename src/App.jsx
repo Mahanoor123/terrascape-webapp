@@ -1,35 +1,41 @@
-// import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import CardSection from "./components/CardSection";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-// import DetailSection from './components/DetailSection';
+import DetailSection from "./pages/DetailSection";
+import { fetchSingleCountry } from "./pages/DetailSection";
+import Layout from "./components/Layout";
+import ErrorPage from "./pages/ErrorPage";
+import NotFound from "./pages/notFound";
+import Home from "./pages/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/country/:id",
+        element: <DetailSection />,
+        loader: fetchSingleCountry,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
+  },
+]);
 
 function App() {
- /*  const router = createBrowserRouter (
-    [
-      {path:"/", element: <App/>},
-      {path:"/country/:id", element:<DetailSection/>, 
-        loader: async ({ params }) => {
-          const res = await fetch(`https://restcountries.com/v3.1/name/${params.name}`);
-          const data = await res.json();
-          return data[0];
-        }
-      }
-    ]
-  ); */
-
-
   return (
     <>
-    <Header/>
-    <Hero />
-    <CardSection/>
-    {/* <DetailSection/> */}
-    {/* <RouterProvider router={router}/> */}
+      <RouterProvider router={router} />
     </>
   );
 }
 
 export default App;
-

@@ -1,11 +1,23 @@
+import { useState } from "react";
+import CardSection from "../components/CardSection"
+import Hero from "../components/Hero"
+import Searchbar from "../components/Searchbar"
 
 
-const home = () => {
+const Home = () => {
+  const [query, setQuery] = useState("");
+
+  const handleSearch = (val) => {
+    setQuery(val);
+  };
+
   return (
-    <div>
-      <h2>homepage</h2>
-    </div>
+    <>
+    <Hero />
+    <Searchbar query={query} setQuery={setQuery} />
+    <CardSection searchQuery={query}  />
+    </>
   )
 }
 
-export default home
+export default Home
