@@ -3,7 +3,7 @@ import CardSection from "../components/CardSection";
 import Hero from "../components/Hero";
 import Searchbar from "../components/Searchbar";
 
-const TempHome = () => {
+const Home = () => {
   const [query, setQuery] = useState("");
 
   const handleSearch = (val) => {
@@ -19,4 +19,4 @@ const TempHome = () => {
       )
 };
 
-export default TempHome;
+export default Home;
