@@ -2,6 +2,7 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import { useNavigation, Outlet } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import Scrollling from "./scrolling.jsx";
 
 const Layout = () => {
   const navigation = useNavigation();
@@ -9,6 +10,7 @@ const Layout = () => {
 
   return (
     <>
+      <Scrollling />
       <Header />
       <AnimatePresence>
         {isLoading && (
