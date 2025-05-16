@@ -21,7 +21,7 @@ import {
           </div>
   
           <div className="flex gap-5 items-center">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61572301925296" target="_blank" rel="noopener noreferrer">
               <FacebookIcon className="hover:text-blue-500 transition" />
             </a>
             <a href="https://www.instagram.com/mk_creative1019/" target="_blank" rel="noopener noreferrer">
@@ -33,7 +33,7 @@ import {
             <a href="https://github.com/Mahanoor123" target="_blank" rel="noopener noreferrer">
               <GithubIcon className="hover:text-gray-300 transition" />
             </a>
-            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://dribbble.com/MK_creative1019" target="_blank" rel="noopener noreferrer">
               <DribbbleIcon className="hover:text-pink-400 transition" />
             </a>
           </div>

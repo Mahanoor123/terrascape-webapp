@@ -3,8 +3,16 @@
 .card-container {
   width: 25vw;
   height: 32vh;
-  perspective: 1000px;
   cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .card-container {
+    padding: 1rem;
+    height: 200px;
+    width: 100vw;
+  }
 }
 .card-inner {
   position: relative;
@@ -68,11 +76,4 @@
     transform: perspective(1000px) rotateY(0deg);
   }
 }
-.glass-background {
-  backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-}
+

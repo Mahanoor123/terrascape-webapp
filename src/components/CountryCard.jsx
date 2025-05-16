@@ -18,7 +18,7 @@ const CountryCard = ({ country }) => {
   return (
     <>
       <motion.div
-        className="card-container"
+       className="card-container"
         onClick={handleFlip}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

@@ -5,6 +5,7 @@ import { fetchSingleCountry } from "./pages/DetailSection";
 import Layout from "./components/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
+import PageNotFound from "./pages/PageNotFound";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
         element: <DetailSection />,
         loader: fetchSingleCountry,
       },
+      {
+        path: "*",
+        element:<PageNotFound />,
+      },
+      
     ],
   },
 ]);
