@@ -2,7 +2,7 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import { useNavigation, Outlet } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import Scrollling from "./scrolling.jsx";
+import Scrollling from "./Scrolling.jsx";
 
 const Layout = () => {
   const navigation = useNavigation();
