@@ -5,8 +5,6 @@ import { fetchSingleCountry } from "./pages/DetailSection";
 import Layout from "./components/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
-import NotFound from "./pages/NotFound"
-
 
 const router = createBrowserRouter([
   {
@@ -22,10 +20,6 @@ const router = createBrowserRouter([
         path: "/country/:id",
         element: <DetailSection />,
         loader: fetchSingleCountry,
-      },
-      {
-        path: "*",
-        element: <NotFound/>
       },
     ],
   },

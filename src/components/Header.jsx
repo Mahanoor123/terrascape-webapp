@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <div className="bg-[#0D1B2A] font-[Jakarta sans] fixed top-0 left-0 right-0 z-50 px-12 flex justify-between text-white items-center">
-        <button>Guess Country</button>
+        <button className="bg-blue-100">Guess Country</button>
         <img src={logo} alt="Terrascape" className="w-[6rem]" />
         <button><Palette /></button>
       </div>
